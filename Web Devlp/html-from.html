@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+
+<title>Welcome</title>
+
+
+<script>
+function myfunction() 
+{
+
+   alert("Submitted");
+}
+function validateFirstName()
+{
+var fName = document.getElementById("firstName").value;
+var re1 = /^[a-zA-Z\s\'\-]{2,15}$/;
+ if(re1.test(fName))
+{
+document.getElementById("firstNamePrompt").style.color = "green";
+document.getElementById("firstNamePrompt").innerHTML="<strong>valid</strong>";
+return true;
+}
+else
+{
+document.getElementById("firstNamePrompt").style.color="red";
+document.getElementById("firstNamePrompt").innerHTML="<strong>invalid</strong>";
+return false;
+}
+}
+
+function validateLastName()
+{
+var lName=document.getElementById("lastName").value;
+var re2=/^[a-zA-Z\s\'\-]{2,25}$/;
+ if(re2.test(lName))
+{
+document.getElementById("lastNamePrompt").style.color="green";
+document.getElementById("lastNamePrompt").innerHTML="<strong>valid</strong>";
+return true;
+}
+else
+{
+document.getElementById("lastNamePrompt").style.color="red";
+document.getElementById("lastNamePrompt").innerHTML="<strong>invalid</strong>";
+return false;
+}
+}
+
+function validatePhone()
+{
+var phoneNumber=document.getElementById("phone").value;
+var re3=/^\d{3}-\d{3}-\d{4}$/;
+if(re3.test(phoneNumber))
+{
+document.getElementById("phonePrompt").style.color="green";
+document.getElementById("phonePrompt").innerHTML="<strong>valid</strong>";
+return (true);
+}
+else
+{
+document.getElementById("phonePrompt").style.color="red";
+document.getElementById("phonePrompt").innerHTML="<strong>invalid</strong>";
+return (false);
+}
+}
+</script>
+
+
+</head>
+
+
+<body bgcolor="#E6E6FA">
+
+
+<center><h1 style="color:purple"><u><strong>Brownie Corner</strong></u></h1></center>
+<br><br>
+
+
+<center><image id="google" src="https://i.ytimg.com/vi/LfQYSXTWe0U/maxresdefault.jpg" height="20%" width="40%" /></center><br><br>
+
+
+<form>
+
+
+<h3>MAKE AN ORDER:</h3>
+
+
+<table>
+
+
+<tr>
+<td>FIRST NAME:</td>
+<td><input name="firstName" id="firstName" type="text" onblur="validateFirstName()"></td>
+<td><span id="firstNamePrompt">&nbsp;</span></td>
+</tr>
+<tr>
+<td>LAST NAME:</td>
+<td><input name="lastName" id="lastName" type="text" onblur="validateLastName()"></td>
+<td><span id="lastNamePrompt">&nbsp;</span></td>
+</tr>
+<tr>
+<td>PHONE NUMBER:</td>
+<td><input name="phone" id="phone" type="text" onblur="validatePhone()"></td>
+<td><span id="phonePrompt">xxx-xxx-xxxx</span>
+</tr>
+<tr>
+<td>ORDER QUANTITY:</td>
+<td><input name="quantity" id="quantity" type="number"></td>
+<td><span id="quantityPrompt">1&ndash;55</span></td>
+</tr>
+<tr>
+<td>ITEM PRICE:</td>
+<td><input name="price" id="price" type="text" value="99.99" read-only>
+<td>INR</td>
+</tr>
+<tr>
+<td><br><br><button onclick="myfunction()">Submit</button></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

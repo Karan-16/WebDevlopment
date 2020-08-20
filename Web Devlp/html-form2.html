@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+
+
+<title>Welcome</title>
+
+
+<link rel="stylesheet" type="text/css" href="Karan5.css"> <!-- links an html file with css file -->
+
+
+<script type="text/javascript" src="Karan5.js">
+</script> <!-- links an html file with javascript file -->
+
+
+</head>
+
+
+<body>
+
+
+<center><h1><u><strong>SATYAM CONTRACTORS</strong></u></h1></center>
+<br><br>
+
+
+<center><image id="google" src="http://nexttechltd.com/wp-content/uploads/2017/04/civil-constraction.jpg" height="40%" width="60%" /></center><br><br>
+
+
+<form>
+
+
+<h3>Fix A Meeting:</h3>
+
+
+<table>
+
+
+<tr>
+<td>FIRST NAME:</td>
+<td><input name="firstName" id="firstName" type="text" onblur="validateFirstName()"></td> <!-- goes to javascript file to validate the information obtained from user as first name -->
+<td><span id="firstNamePrompt">&nbsp;</span></td>
+</tr>
+<tr>
+<td>LAST NAME:</td>
+<td><input name="lastName" id="lastName" type="text" onblur="validateLastName()"></td> <!-- goes to javascript file to validate the information obtained from user as last name -->
+<td><span id="lastNamePrompt">&nbsp;</span></td>
+</tr>
+<tr>
+<td>PHONE NUMBER:</td>
+<td><input name="phone" id="phone" type="text" onblur="validatePhone()"></td> <!-- goes to javascript file to validate the information obtained from user as phone number -->
+<td><span id="phonePrompt">xxx-xxx-xxxx</span>
+</tr>
+<tr>
+<td>ADDRESS:</td>
+<td><input name="address" type="text"></td>
+</tr>
+<tr>
+<td>REQUIREMENTS:</td>
+<td><input type="checkbox" name="tools" value="fall ceiling">FALL CIELING<br></td>
+<td><input type="checkbox" name="tools" value="ducting">DUCTING<br></td>
+<td><input type="checkbox" name="tools" value="insulation">INSULATION<br></td>
+<td><input type="checkbox" name="tools" value="texture">TEXTURE<br></td>
+<td><input type="checkbox" name="tools" value="paint">PAINT<br></td>
+</tr>
+<tr>
+<td>SCALE:</td>
+<td><input type="radio" name="scacle" value="scale">INDUSTRIAL SCALE<br></td>
+<td><input type="radio" name="scale" value="scale">COMMERCIAL SCALE<br></td> <!-- radio allows user to select either of the options -->
+<tr>
+<td>DATE:</td>
+<td><input type="date" name="date"></td> <!-- displays a message (after the user has entered information if more than 55) -->
+</tr>
+</table>
+<br><br><br>
+<button onclick="myfunction()">Submit</button><br><br> <!-- displays an alert as soon as user clicks the submit button -->
+</form>
+<h5><center>For Personal Details Contact :KARAN GOEL<br>9872831045/7087081045<br>Sector 45,CHD</center></h5>
+</body>
+</html>
